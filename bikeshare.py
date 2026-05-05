@@ -1,3 +1,7 @@
+
+# Import required libraries for data analysis
+
+
 import time
 import pandas as pd
 import numpy as np
@@ -15,7 +19,12 @@ def get_filters():
         (str) month - name of the month to filter by, or "all" to apply no month filter
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
+
     print('Hello! Let\'s explore some US bikeshare data!')
+
+    # Get user input for city, month, and day filters
+    print("\n--- Bikeshare Data Analysis Tool ---\n")
+
 
     # valid options
     city_list = ['chicago', 'new york city', 'washington']
@@ -70,7 +79,11 @@ def load_data(city, month, day):
     Returns:
         df - Pandas DataFrame containing city data filtered by month and day
     """
+
         # Load data for the selected city from CSV file
+
+    # Load and filter bikeshare dataset based on user input
+
     df = pd.read_csv(CITY_DATA[city])
 
     # ---------------- CONVERT TO DATETIME ----------------
@@ -95,7 +108,10 @@ def load_data(city, month, day):
 
 
 def time_stats(df):
+
     """Displays statistics on the most frequent times of travel."""
+
+# Display statistics for travel time analysis
 
     print('\nCalculating The Most Frequent Times of Travel...\n')
     start_time = time.time()
